@@ -1,0 +1,40 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+    <ion-title>Registration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div align="center">
+	  <div class="test" (click)="uploadImage()">
+	    <img [src]="userImage" class="ion-align-self-center">
+	    <ion-icon name="camera" class="profilebutton"></ion-icon>
+	  </div>
+	</div>
+	<ion-item class="auth-input">
+		<ion-input [(ngModel)]="name" type="text" placeholder="Name"></ion-input>
+	</ion-item>
+	<ion-item margin-top class="auth-input">
+		<ion-input [(ngModel)]="email" type="text" placeholder="Email"></ion-input>
+	</ion-item>
+	<ion-item margin-top class="auth-input">
+		<ion-input [(ngModel)]="phone" type="tel" placeholder="Phone"></ion-input>
+	</ion-item>
+	<ion-item margin-top class="auth-input">
+	  <ion-label>Account Type</ion-label>
+	  <ion-select [(ngModel)]="type">
+	    <ion-option value="Seller">Seller</ion-option>
+	    <ion-option value="Consumer">Consumer</ion-option>
+	  </ion-select>
+	</ion-item>
+	<ion-item margin-top class="auth-input">
+		<ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+	</ion-item>
+	<ion-item margin-top class="auth-input">
+		<ion-input [(ngModel)]="c_password" type="password" placeholder="Confirm Password"></ion-input>
+	</ion-item>
+	<br>
+	<button color="myColor" [disabled]="isDisabled()" ion-button class="signup-button" (click)="register()">
+		<ion-spinner *ngIf="loading"></ion-spinner>
+		<span *ngIf="!loading">Register</span></button>
+</ion-content>

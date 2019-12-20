@@ -1,0 +1,36 @@
+page-view-ad {
+	.scroll-content, ion-header{
+		background-color: #E6E6E6;
+	}
+
+	img{
+		border-radius: 12px
+	}
+
+	span{
+		font-weight: bold;
+		font-size: 18px;
+		color: #5EAF61
+	}
+
+	.msg{
+		font-weight: normal;
+		font-size: 14px
+	}
+
+	.data{
+		background-color: white;
+		width: 100%;
+		padding: 15px 10px 5px 5px;
+		border-radius: 10px;
+		margin-top: 10px
+	}
+
+	.content-icon{
+		color: #5EAF61
+	}
+
+	ion-icon{
+		color: white
+	}
+}

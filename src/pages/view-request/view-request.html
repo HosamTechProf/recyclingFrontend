@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+	    <ion-title>
+	    	 View Request
+    	</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<img src="{{image}}{{data.image}}">
+	<div align="center">
+		<h4>{{userName}} Requested to buy {{data.name}}.</h4>
+	</div>
+	<ion-card>
+	  <ion-card-content align="center">
+	    <button ion-button icon-start round outline color="myColor" (click)="accept(data.id)">
+	      <ion-icon name="checkmark"></ion-icon>
+	      Accept
+	    </button>
+	    <button ion-button icon-end round outline color="danger" (click)="cancel(data.id)">
+	      Cancel
+	      <ion-icon name="close"></ion-icon>
+	    </button><br>
+		<span style="font-size: 14px;color: #5EAF61">*make sure to press the confirm button only in case if you came with the consumer to agreement and the selling process is successfully completed, else, press “cancel”</span>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

@@ -1,0 +1,23 @@
+page-home {
+	.scroll-content, ion-header{
+		background-color: #E6E6E6;
+	}
+
+	.item {
+		border-radius: 10px;
+		border: 1.5px solid #27ae60
+	}
+
+	.searchbar-input{
+		box-shadow: none !important;
+		border-radius: 30px !important;
+	}
+
+	.surveyBtn{
+		border-radius: 0px 0px 20px 20px;
+		font-weight: bold;
+		font-size: 20px;
+		padding: 20px
+	}
+
+}

@@ -1,0 +1,140 @@
+<ion-content>
+<div align="center">
+
+	<div *ngIf="question === 0">
+		<div class="header">
+			<h6>What do you think of the of the app?</h6>
+		</div>
+		<div class="body">
+			<button ion-button color="myColor" (click)="ansewrType(1, 'Super')">Super</button>
+			<button ion-button color="danger" (click)="ansewrType(1, 'Can be better')">Can be better</button>
+		</div>
+	</div>
+
+	<div *ngIf="question === 1">
+		<div class="header">
+				The whole application :<br>
+				<h6>How much useful and effective was the application?</h6>
+			</div>
+			<div class="body">
+				<button (click)="ansewrQuestion1(2,0)" class="ansewsBtn" ion-button color="myColor">0</button>
+				<button (click)="ansewrQuestion1(2,1)" class="ansewsBtn" ion-button color="myColor">1</button>
+				<button (click)="ansewrQuestion1(2,2)" class="ansewsBtn" ion-button color="myColor">2</button>
+				<button (click)="ansewrQuestion1(2,3)" class="ansewsBtn" ion-button color="myColor">3</button>
+				<button (click)="ansewrQuestion1(2,4)" class="ansewsBtn" ion-button color="myColor">4</button>
+				<button (click)="ansewrQuestion1(2,5)" class="ansewsBtn" ion-button color="myColor">5</button>
+				<button (click)="ansewrQuestion1(2,6)" class="ansewsBtn" ion-button color="myColor">6</button>
+				<button (click)="ansewrQuestion1(2,7)" class="ansewsBtn" ion-button color="myColor">7</button>
+				<button (click)="ansewrQuestion1(2,8)" class="ansewsBtn" ion-button color="myColor">8</button>
+				<button (click)="ansewrQuestion1(2,9)" class="ansewsBtn" ion-button color="myColor">9</button>
+				<button (click)="ansewrQuestion1(2,10)" class="ansewsBtn" ion-button color="myColor">10</button>
+				<br>
+				<span class="info" style="float:left">0 - Not likely</span>
+				<span class="info" style="float: right">10 - Most likely</span>
+			</div>
+	</div>
+
+	<div *ngIf="question === 2">
+		<div class="header">
+				Design of the interface :<br>
+				<h6>Was it easy to use?</h6>
+			</div>
+			<div class="body">
+				<button (click)="ansewrQuestion2(3,0)" class="ansewsBtn" ion-button color="myColor">0</button>
+				<button (click)="ansewrQuestion2(3,1)" class="ansewsBtn" ion-button color="myColor">1</button>
+				<button (click)="ansewrQuestion2(3,2)" class="ansewsBtn" ion-button color="myColor">2</button>
+				<button (click)="ansewrQuestion2(3,3)" class="ansewsBtn" ion-button color="myColor">3</button>
+				<button (click)="ansewrQuestion2(3,4)" class="ansewsBtn" ion-button color="myColor">4</button>
+				<button (click)="ansewrQuestion2(3,5)" class="ansewsBtn" ion-button color="myColor">5</button>
+				<button (click)="ansewrQuestion2(3,6)" class="ansewsBtn" ion-button color="myColor">6</button>
+				<button (click)="ansewrQuestion2(3,7)" class="ansewsBtn" ion-button color="myColor">7</button>
+				<button (click)="ansewrQuestion2(3,8)" class="ansewsBtn" ion-button color="myColor">8</button>
+				<button (click)="ansewrQuestion2(3,9)" class="ansewsBtn" ion-button color="myColor">9</button>
+				<button (click)="ansewrQuestion2(3,10)" class="ansewsBtn" ion-button color="myColor">10</button>
+				<br>
+				<span class="info" style="float:left">0 - Not likely</span>
+				<span class="info" style="float: right">10 - Most likely</span>
+			</div>
+	</div>
+
+	<div *ngIf="question === 3">
+		<div class="header">
+				Bar code scanning :<br>
+				<h6>How much was this addition useful and easy to use?</h6>
+			</div>
+			<div class="body">
+				<button (click)="ansewrQuestion3(4,0)" class="ansewsBtn" ion-button color="myColor">0</button>
+				<button (click)="ansewrQuestion3(4,1)" class="ansewsBtn" ion-button color="myColor">1</button>
+				<button (click)="ansewrQuestion3(4,2)" class="ansewsBtn" ion-button color="myColor">2</button>
+				<button (click)="ansewrQuestion3(4,3)" class="ansewsBtn" ion-button color="myColor">3</button>
+				<button (click)="ansewrQuestion3(4,4)" class="ansewsBtn" ion-button color="myColor">4</button>
+				<button (click)="ansewrQuestion3(4,5)" class="ansewsBtn" ion-button color="myColor">5</button>
+				<button (click)="ansewrQuestion3(4,6)" class="ansewsBtn" ion-button color="myColor">6</button>
+				<button (click)="ansewrQuestion3(4,7)" class="ansewsBtn" ion-button color="myColor">7</button>
+				<button (click)="ansewrQuestion3(4,8)" class="ansewsBtn" ion-button color="myColor">8</button>
+				<button (click)="ansewrQuestion3(4,9)" class="ansewsBtn" ion-button color="myColor">9</button>
+				<button (click)="ansewrQuestion3(4,10)" class="ansewsBtn" ion-button color="myColor">10</button>
+				<br>
+				<span class="info" style="float:left">0 - Not likely</span>
+				<span class="info" style="float: right">10 - Most likely</span>
+			</div>
+	</div>
+
+	<div *ngIf="question === 4">
+		<div class="header">
+				Advertisements and the communication process :<br>
+				<h6>was there any problem?</h6>
+			</div>
+			<div class="body">
+				<button (click)="ansewrQuestion4(7,0)" class="ansewsBtn" ion-button color="myColor">0</button>
+				<button (click)="ansewrQuestion4(7,1)" class="ansewsBtn" ion-button color="myColor">1</button>
+				<button (click)="ansewrQuestion4(7,2)" class="ansewsBtn" ion-button color="myColor">2</button>
+				<button (click)="ansewrQuestion4(7,3)" class="ansewsBtn" ion-button color="myColor">3</button>
+				<button (click)="ansewrQuestion4(7,4)" class="ansewsBtn" ion-button color="myColor">4</button>
+				<button (click)="ansewrQuestion4(7,5)" class="ansewsBtn" ion-button color="myColor">5</button>
+				<button (click)="ansewrQuestion4(7,6)" class="ansewsBtn" ion-button color="myColor">6</button>
+				<button (click)="ansewrQuestion4(7,7)" class="ansewsBtn" ion-button color="myColor">7</button>
+				<button (click)="ansewrQuestion4(7,8)" class="ansewsBtn" ion-button color="myColor">8</button>
+				<button (click)="ansewrQuestion4(7,9)" class="ansewsBtn" ion-button color="myColor">9</button>
+				<button (click)="ansewrQuestion4(7,10)" class="ansewsBtn" ion-button color="myColor">10</button>
+				<br>
+				<span class="info" style="float:left">0 - Not likely</span>
+				<span class="info" style="float: right">10 - Most likely</span>
+			</div>
+	</div>
+
+	<div *ngIf="question === 5">
+		<div class="header">
+				Please Let us know :<br>
+				<h6>Your feedback</h6>
+			</div>
+			<div class="body">
+				<ion-item>
+				  <ion-textarea placeholder="Type Your Feedback..." [(ngModel)]="q5"></ion-textarea>
+				</ion-item>
+				<button [disabled]="!q5" ion-button color="myColor" (click)="ansewrQuestion5(6,q5)">Submit</button>
+			</div>
+	</div>
+
+	<div *ngIf="question === 6">
+		<div class="header">
+				Please Let us know :<br>
+				<h6>Are there any functions you would like us to add (what can we do to improve?</h6>
+			</div>
+			<div class="body">
+				<ion-item>
+				  <ion-textarea placeholder="Type Here..." [(ngModel)]="q6"></ion-textarea>
+				</ion-item>
+				<button [disabled]="!q6" ion-button color="myColor" (click)="ansewrQuestion6(7,q6)">Submit</button>
+			</div>
+	</div>
+
+	<div *ngIf="question === 7">
+		<div class="header">
+			 	<ion-icon style="font-size: 40px" name="checkmark-circle"></ion-icon>
+				<h6>Thank you (:</h6>
+			</div>
+	</div>
+
+</div>
+</ion-content>

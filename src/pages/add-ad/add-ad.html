@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+   <div align="center">
+      <ion-title>
+        <ion-icon name="add"></ion-icon>
+         Add An Advertisement
+      </ion-title>
+  </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div style="padding-top:1%">
+		<div align="center">
+		  <div class="test" (click)="uploadImage()">
+		    <img [src]="adImage">
+		    <ion-icon name="add" class="profilebutton"></ion-icon>
+		  </div>
+		</div>
+		<ion-item class="add-input">
+			<ion-input type="text" placeholder="Advertisement Name" type="text" [(ngModel)]="name"></ion-input>
+		</ion-item>
+		<br>
+		<ion-item class="add-input">
+			<ion-input placeholder="Description" type="text" [(ngModel)]="desc"></ion-input>
+		</ion-item>
+		<br>
+		<ion-item class="add-input">
+			<ion-input placeholder="Price" type="text" [(ngModel)]="price"></ion-input>
+		</ion-item>
+	</div>
+	<br>
+	<button color="myColor" [disabled]="loading || !name || !desc || !price" ion-button class="add-button" (click)="add()">
+		<ion-spinner *ngIf="loading"></ion-spinner>
+		<span *ngIf="!loading">Add</span>
+	</button>
+</ion-content>
+

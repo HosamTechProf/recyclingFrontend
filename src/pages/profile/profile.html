@@ -1,0 +1,73 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+	 <div align="center">
+	    <ion-title>
+	    	<ion-icon name="person"></ion-icon>
+	    	 My Profile
+    	</ion-title>
+	</div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div align="center">
+    <img [src]="image" class="userImage">
+    <h2>Points: {{points}} - {{type}}</h2>
+</div>
+<ion-card>
+
+  <ion-card-header>
+    Name :
+  </ion-card-header>
+
+  <ion-card-content>
+    {{name}}
+  </ion-card-content>
+
+</ion-card>
+
+<ion-card>
+
+  <ion-card-header>
+    Email :
+  </ion-card-header>
+
+  <ion-card-content>
+    {{email}}
+  </ion-card-content>
+
+</ion-card>
+
+<ion-card>
+
+  <ion-card-header>
+    Phone :
+  </ion-card-header>
+
+  <ion-card-content>
+    {{phone}}
+  </ion-card-content>
+
+</ion-card>
+
+<ion-card>
+  <ion-card-content align="center">
+    <button ion-button icon-start color="myColor" [navPush]="'RequestsPage'">
+      <ion-icon name="git-branch"></ion-icon>
+      My Requests
+    </button>
+    <button ion-button icon-end color="myColor" [navPush]="'MyAdsPage'">
+      My Ads
+      <ion-icon name="paper" round></ion-icon>
+    </button>
+  </ion-card-content>
+</ion-card>
+
+<div align="center" style="padding-bottom: 15px">
+	<button ion-button icon-start color="myColor" (click)="logout()">
+	  <ion-icon name="log-out"></ion-icon>
+	  Logout
+	</button>
+</div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+    <ion-title><ion-icon name="eye"></ion-icon> View Advertisement</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="goBack()">
+            <ion-icon item-right name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<img src="{{image}}">
+<div class="data">
+<div align="center">
+		<h5>
+			<ion-icon class="content-icon" name="contact"></ion-icon> {{user.name}} <br><br>
+			<ion-icon class="content-icon" name="call"></ion-icon> {{user.phone}}
+		</h5>
+</div>
+<hr>
+<h6><ion-icon class="content-icon" name="pricetag"></ion-icon> <span>Name: </span>{{name}}</h6>
+<hr>
+<h6><ion-icon class="content-icon" name="document"></ion-icon> <span>Description: </span>{{desc}}</h6>
+<hr>
+<h6><ion-icon class="content-icon" name="cash"></ion-icon> <span>Price: </span>{{price}}</h6>
+<hr>
+<br>
+<div align="center">
+	<button ion-button color="myColor" round (click)="request()" *ngIf="type === false">
+		<ion-spinner *ngIf="loading"></ion-spinner>
+		<span style="color:white" *ngIf="!loading">Request</span>
+	</button>
+	<button ion-button color="myColor" round outline *ngIf="type === true">
+		<ion-spinner *ngIf="loading"></ion-spinner>
+		<span *ngIf="!loading">Requested</span>
+	</button><br>
+	<span class="msg">*make sure to press the request button only in case if the ad fits you and will contact the advertiser (press before the communication)</span>
+</div>
+</div>
+</ion-content>

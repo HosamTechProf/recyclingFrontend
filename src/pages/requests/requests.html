@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-navbar color="myColor">
+	    <ion-title>
+	    	<ion-icon name="git-branch"></ion-icon>
+	    	 Requests
+    	</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+  <ion-item *ngFor="let request of requests" (click)="openRequestPage(request)">
+    <ion-avatar item-start>
+      <img src="{{image}}{{request.image}}">
+    </ion-avatar>
+    <h2>{{request.name}}</h2>
+    <p>{{request.desc}}</p>
+  </ion-item>
+</ion-list>
+</ion-content>

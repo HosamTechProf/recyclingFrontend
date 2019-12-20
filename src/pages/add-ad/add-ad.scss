@@ -1,0 +1,57 @@
+page-add-ad {
+	.content {
+		background: white;
+	}
+
+	h1 {
+		text-align: center;
+		color: grey;
+		font-size: 3rem;
+		padding-top: 25px;
+	}
+
+	.add-input {
+		background: #f5f5f5;
+		padding: 5px !important;
+		border-radius: 3px;
+		color: grey;
+		box-shadow: 8px 8px 18px -5px rgba(0,0,0,0.05);
+		.item-inner {
+			border: none !important;
+		}
+	}
+
+	.add-button {
+		width: 150px;
+		height: 50px;
+		display: block;
+		margin: 20px auto;
+	}
+
+	img{
+		width: 300px;
+		border-radius: 10px;
+		border: 2px solid white;
+		-webkit-box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.1);
+		box-shadow: 0px 4px 10px 2px rgba(0,0,0,0.1);
+	}
+
+	.test {
+	  position: relative;
+	  display: inline-block;
+	  padding: 15px
+	}
+
+	.profilebutton {
+	    z-index: 5;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate( -50%, -50% );
+	    padding: 3px 15px 3px 15px;
+	    color: white;
+	    font-size: 30px !important;
+	    background-color: rgba(23, 35, 34, 0.75);
+	    border-radius: 5px 5px 5px 5px;
+	}
+}

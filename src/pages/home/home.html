@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="home" color="secondary" color="myColor">
+      <ion-segment-button value="ads">
+        <ion-icon name="paper"></ion-icon>
+        <div style="margin-top: -18px !important;font-size: 14px;font-weight: bold">
+          Advertisement
+        </div>
+      </ion-segment-button>
+      <ion-segment-button value="scan">
+        <ion-icon name="qr-scanner"></ion-icon>
+        <div style="margin-top: -18px !important;font-size: 14px;font-weight: bold">
+          Scan
+        </div>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+    <button class="surveyBtn" color="myColor" ion-button full (click)="survey()">Take Survey</button>
+</ion-header>
+<ion-content padding>
+
+<div [ngSwitch]="home">
+  <div *ngSwitchCase="'ads'">
+    <ion-list *ngFor="let ad of ads">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="{{image}}{{ad.image}}">
+        </ion-thumbnail>
+        <h2>{{ad.name}}</h2>
+        <p>{{ad.desc}}</p>
+        <p>Price : {{ad.price}}</p>
+        <button ion-button outline round item-end color="myColor" (click)="openAd(ad.id)">View</button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngSwitchCase="'scan'" align="center">
+    <button ion-button color="myColor" style="border-radius:10px;box-shadow:none;padding:30px;font-size: 15px;font-weight: bold;margin-top: 50px" (click)="scan()">Scan Barcode</button>
+  </div>
+</div>
+
+</ion-content>

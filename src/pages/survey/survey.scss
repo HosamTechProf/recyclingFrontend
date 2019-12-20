@@ -1,0 +1,28 @@
+page-survey {
+	.header{
+		background-color: #EEEEEC;
+		width: 100%;
+		padding: 15px 1px 15px 1px;
+	}
+
+	.body{
+		padding: 15px 10px 15px 10px;
+	}
+
+	.ansewsBtn{
+		box-shadow: none;
+		border-radius: 50%;
+		font-weight: bold
+	}
+
+	h6{
+		font-weight: bold;
+		color: #2E3436
+	}
+
+	.info{
+		color: #888A85;
+		font-size: 13px;
+		padding-top: 7px
+	}
+}
